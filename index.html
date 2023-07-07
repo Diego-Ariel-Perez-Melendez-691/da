@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/estilo.css">
+    <title>PIZZAS</title>
+</head>
+<body onload="calcular() " class="text-center">
+    
+    <img class="w-50 "src="img/pizzascidas.avif" alt="">
+    <h1 class="bg-warning m-5">PIZZAS</h1>
+    <div class="card m-5">
+    <h1 class=" bg-dark text-white ">Producto:</h1>
+    <select class="form-control "name="producto" onchange="calcular()" id="producto">
+        <option value="PizzaIndividual" >PizzaIndividual</option>
+        <option value="PizzaGrande" >PizzaGrande</option>
+        <option value="PizzaFamiliar" >PizzaFamiliar</option>
+        <option value="PizzaJumbo" >PizzaJumbo</option>
+        
+    </select>
+    <div class="bg-dark text-white h1 "id="precio">Precio C: $ 0.00 MXN</div>
+    
+    <h1 class="bg-success">Cantidad</h1>
+    <input class="form-control "type="range" id="cantidad" value="0" min="1" max="10">
+    <label class="h2 "id="vcan">1</label>
+    <div class="bg-dark text-white h1 "id="precioC">Precio Contado: $ 0.00 MXN</div>
+    
+    
+    <div class="m-2 ">
+        <h1 class=" bg-dark text-white ">Extras:</h1>
+    <input type="checkbox" name="m" id="m40" class="form-check-imput " onchange="calcular()" >Refresco $40
+    <br>
+    <input type="checkbox" name="m" id="m50" class="form-check-input" onchange="calcular()" >Papas $50
+    <br>
+    <input type="checkbox" name="m" id="m75" class="form-check-input" onchange="calcular()" >Alitas $75
+    
+    </div>
+
+
+    <div class="m-2 ">
+        <h1 class=" bg-dark text-white ">Ingredientes:</h1>
+    <input type="radio" name="I" id="uno" class="form-check-imput " onchange="calcular()" >uno $0
+    <br>
+    <input type="radio" name="I" id="dos" class="form-check-input" onchange="calcular()" >dos $20
+    <br>
+    <input type="radio" name="I" id="tres" class="form-check-input" onchange="calcular()" >tres $35
+    
+    </div>
+
+
+        <div class="bg-dark text-white h2 "id="credito">Precio Total: $ 0.00 MXN</div>
+   </div>
+    <script src="/estilo/bootstrap.min.js"></script>
+    <script src="/estilo/sweetalert2.all.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
